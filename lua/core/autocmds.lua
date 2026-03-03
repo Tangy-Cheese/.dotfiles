@@ -8,8 +8,12 @@ vim.api.nvim_create_autocmd("TermOpen", {
         -- Resize to fixed height
         vim.cmd("resize 10")
 
+        -- Open in insert mode
+        vim.cmd("startinsert")
+
         -- Disable line numbers
         vim.opt_local.number = false
         vim.opt_local.relativenumber = false
     end,
 })
+

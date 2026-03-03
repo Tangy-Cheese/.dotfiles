@@ -14,3 +14,13 @@ vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>")
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Find files" })
 vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Search in files" })
 vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find buffers" })
+
+-- Keybind to open terminal in horizontal split
+vim.keymap.set("n", "<leader>t", function()
+    vim.cmd("split | terminal")
+end, { silent = true })
+
+-- Easier exit from terminal mode
+vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]])
+
+
