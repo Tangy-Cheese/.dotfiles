@@ -5,20 +5,26 @@ return {
     opts = {
       options = {
         theme = "auto",
-        globalstatus = false,          -- Multiple statusline across splits
-        section_separators = "",       -- remove arrows
-        component_separators = ".",     -- remove separators
+        globalstatus = false,
+
+        section_separators = { left = "", right = "" },
+        component_separators = { left = "", right = "" },
       },
 
       sections = {
-        lualine_a = { "mode" },
+        lualine_a = {
+          {
+            "mode",
+            color = { bg = "#00d7ff", fg = "#1e1f28" },
+          },
+        },
 
         lualine_b = { "branch", "diff" },
 
         lualine_c = {
           {
             "filename",
-            path = 1,                  -- relative path
+            path = 1,
           },
         },
 
@@ -26,7 +32,12 @@ return {
 
         lualine_y = { "progress" },
 
-        lualine_z = { "location" },
+        lualine_z = {
+          {
+            "location",
+            color = { bg = "#ff5fd7", fg = "#1e1f28" },
+          },
+        },
       },
 
       inactive_sections = {
