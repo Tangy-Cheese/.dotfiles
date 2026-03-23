@@ -8,10 +8,8 @@ This repository manages configuration for:
 
 * Neovim
 * Tmux
-* Terminal
+* Terminal emulator
 * (future configs)
-
-Configs are managed using **GNU Stow** for symlink-based deployment.
 
 ## Installation
 
