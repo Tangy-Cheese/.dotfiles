@@ -23,5 +23,5 @@ vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#ff5f00", bold = true }) -- neon 
 
 -- Relative line numbers (less dominant)
 vim.api.nvim_set_hl(0, "LineNr", {
-  fg = "#00CC99",
+  fg = "#F2E7C9",
 })
