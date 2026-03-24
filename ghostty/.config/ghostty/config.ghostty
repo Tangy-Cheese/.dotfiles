@@ -9,7 +9,7 @@ window-padding-x = 0
 window-padding-y = 0
 
 # Cursor
-
+mouse-hide-while-typing = true
 cursor-style = block
 
 # Colors (Pure monochrome)
