@@ -19,7 +19,7 @@ opt.expandtab = true
 -- No highlight on the actual line
 vim.api.nvim_set_hl(0, "CursorLine", { bg = "NONE" })
 
-vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#ff5f00", bold = true }) -- neon orange
+vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#39FF14", bold = true }) -- neon green
 
 -- Relative line numbers (less dominant)
 vim.api.nvim_set_hl(0, "LineNr", {

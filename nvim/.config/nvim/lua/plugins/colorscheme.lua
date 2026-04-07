@@ -1,9 +1,11 @@
-return{
+return {
     {
-          "qaptoR-nvim/chocolatier.nvim",
-          priority = 1000,
-          config = function()
-            vim.cmd.colorscheme("chocolatier")
-          end,
+        "iruzo/matrix-nvim",
+        priority = 1000,
+        config = function()
+
+            vim.g.matrix_disable_background = true
+            vim.cmd.colorscheme("matrix")
+        end,
     }
 }
