@@ -20,11 +20,12 @@ return {
     },
     opts = {
       ensure_installed = {
-        "lua_ls",
-        "clangd",
-        "pyright",
-        "ts_ls",
-        "texlab",
+        "lua_ls", -- Lua
+        "clangd", -- C/C++
+        "pyright", -- Python
+        "ts_ls", -- Typescript/Javascript
+        "texlab", -- LaTeX
+        "rust_analyzer", --Rust
       },
     },
   },
