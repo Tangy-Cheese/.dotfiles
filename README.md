@@ -9,6 +9,8 @@ This repository manages configuration for:
 * Neovim
 * Tmux
 * Terminal emulator
+* Tomodoro
+* Starship
 * (future configs)
 
 ## Installation
