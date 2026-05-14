@@ -1,22 +1,21 @@
 # Font
-
 font-family = JetBrainsMono Nerd Font
 font-size = 10
 
 # Window
-
-window-padding-x = 0
-window-padding-y = 0
+window-decoration = false
+gtk-titlebar = false
+window-padding-x = 4
+window-padding-y = 4
+unfocused-split-opacity = 1.0
 
 # Cursor
 mouse-hide-while-typing = true
 cursor-style = block
 
 # Colors (Pure monochrome)
-
 theme = HaX0R Gr33N
 
 # Auto-update
-
 auto-update = check
 
