@@ -1,18 +1,5 @@
 # Dotfiles
 
-My personal Linux development environment configuration.
-
-## Overview
-
-This repository manages configuration for:
-
-* Neovim
-* Tmux
-* Terminal emulator
-* Tomodoro
-* Starship
-* (future configs)
-
 ## Installation
 
 Clone the repository:
@@ -25,8 +12,7 @@ cd ~/.dotfiles
 Stow packages:
 
 ```bash
-stow nvim
-...
+stow .
 ```
 
 ## Updating
@@ -35,15 +21,5 @@ stow nvim
 cd ~/.dotfiles
 git pull
 stow *
-```
-
-## Structure
-
-Each top-level folder is a **stow package** that mirrors the `$HOME` directory structure.
-
-Example:
-
-```bash
-nvim/.config/nvim → ~/.config/nvim
 ```
 
