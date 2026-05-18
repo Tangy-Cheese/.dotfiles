@@ -27,7 +27,16 @@ return{
         -- C-k: Toggle signature help (if signature.enabled = true)
         --
         -- See :h blink-cmp-config-keymap for defining your own keymap
-        keymap = { preset = 'default' },
+        keymap = {
+          preset = 'default',
+          -- Accepts with tab
+          ['<Tab>'] = {'accept', 'fallback'},
+          -- Doc popup navigation
+          ['<C-k>']   = { 'show_documentation', 'hide_documentation', 'fallback' },
+          ['<C-d>']   = { 'scroll_documentation_down', 'fallback' },
+          ['<C-u>']   = { 'scroll_documentation_up', 'fallback' },
+
+        },
 
         appearance = {
           -- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
