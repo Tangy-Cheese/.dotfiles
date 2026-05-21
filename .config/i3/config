@@ -72,3 +72,4 @@ client.focused_inactive #1a1a1a #1a1a1a #888888 #1a1a1a #1a1a1a
 # Wallpaper
 exec_always feh --bg-scale ~/.dotfiles/i3/archeagle.png
 
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
