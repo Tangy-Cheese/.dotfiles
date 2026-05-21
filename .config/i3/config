@@ -2,7 +2,7 @@
 set $mod Mod4
 
 # Font
-font pango:JetBrainsMono Nerd Font 10
+font pango:JetBrainsMono Nerd Font 8
 
 # Terminal
 bindsym $mod+Return exec alacritty
@@ -72,5 +72,6 @@ client.focused_inactive #1a1a1a #1a1a1a #888888 #1a1a1a #1a1a1a
 # Wallpaper
 exec_always feh --bg-scale ~/.dotfiles/.config/i3/bh.png
 
-# Autostart
 exec_always --no-startup-id picom
+
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
