@@ -1,0 +1,76 @@
+# i3 config
+set $mod Mod4
+
+# Font
+font pango:JetBrainsMono Nerd Font 10
+
+# Terminal
+bindsym $mod+Return exec alacritty
+
+# Kill window
+bindsym $mod+q kill
+
+# Launcher
+bindsym $mod+d exec rofi -show drun
+
+# Reload config
+bindsym $mod+Shift+r restart
+
+# Logout
+bindsym $mod+Shift+e exec i3-nagbar -t warning -m 'Exit i3?' -B 'Yes' 'i3-msg exit'
+
+# Focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# Move windows
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# Workspaces
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+
+# Splits
+bindsym $mod+b split h
+bindsym $mod+v split v
+
+# Fullscreen
+bindsym $mod+f fullscreen toggle
+
+# Floating
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+floating_modifier $mod
+
+# Gaps
+gaps inner 10
+gaps outer 6
+
+# Borders
+default_border pixel 2
+default_floating_border pixel 2
+
+# Orange border for focused window
+client.focused          #FF8C00 #FF8C00 #ffffff #FF8C00 #FF8C00
+client.unfocused        #1a1a1a #1a1a1a #888888 #1a1a1a #1a1a1a
+client.focused_inactive #1a1a1a #1a1a1a #888888 #1a1a1a #1a1a1a
+
+# Wallpaper
+exec_always feh --bg-scale ~/archeagle.png
+
+# Autostart
+exec_always --no-startup-id picom
