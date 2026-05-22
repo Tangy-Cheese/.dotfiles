@@ -26,7 +26,5 @@ stow *
 todo conf:
 - ly
 - thunar 
-- i3
 - fireshot
-- polybar
 

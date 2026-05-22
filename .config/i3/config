@@ -10,6 +10,8 @@ bindsym $mod+Return exec ghostty
 # Browser
 bindsym $mod+p exec google-chrome-stable
 
+# Thunar
+bindsym $mod+o exec Thunar
 # Kill window
 bindsym $mod+q kill
 
@@ -59,6 +61,21 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 floating_modifier $mod
 
+# Increase volume by 5%
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
+
+# Decrease volume by 5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
+
+# Mute/Unmute volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# Adjust screen brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
+
+# Screenshots
+bindsym Print exec flameshot gui --path ~/Pictures/Screenshots
 # Gaps
 gaps inner 10
 gaps outer 6

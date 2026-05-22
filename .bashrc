@@ -87,6 +87,6 @@ export NVM_DIR="$HOME/.nvm"
 
 eval "$(starship init bash)"
 
-neofetch
+fastfetch
 
 export PATH="$HOME/.local/bin:$PATH"
