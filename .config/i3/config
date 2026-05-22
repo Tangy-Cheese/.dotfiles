@@ -5,7 +5,10 @@ set $mod Mod4
 font pango:JetBrainsMono Nerd Font 8
 
 # Terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec ghostty
+
+# Browser
+bindsym $mod+p exec google-chrome-stable
 
 # Kill window
 bindsym $mod+q kill
@@ -70,8 +73,10 @@ client.unfocused        #1a1a1a #1a1a1a #888888 #1a1a1a #1a1a1a
 client.focused_inactive #1a1a1a #1a1a1a #888888 #1a1a1a #1a1a1a
 
 # Wallpaper
-exec_always feh --bg-scale ~/.dotfiles/.config/i3/bh.png
+exec_always feh --bg-center ~/.dotfiles/.config/i3/bh.png
 
+bindsym button3 exec jgmenu_run
 exec_always --no-startup-id picom
+
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh

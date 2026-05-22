@@ -89,3 +89,4 @@ eval "$(starship init bash)"
 
 neofetch
 
+export PATH="$HOME/.local/bin:$PATH"
