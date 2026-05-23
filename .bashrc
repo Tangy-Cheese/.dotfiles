@@ -87,6 +87,17 @@ export NVM_DIR="$HOME/.nvm"
 
 eval "$(starship init bash)"
 
-fastfetch
+_ff_counter=~/.cache/fastfetch_counter
+_ff_count=$(cat "$_ff_counter" 2>/dev/null || echo 0)
+
+if (( _ff_count % 2 == 0 )); then
+    fastfetch --config ~/.config/fastfetch/config.jsonc
+else
+    fastfetch --config ~/.config/fastfetch/tux.jsonc
+fi
+
+echo $(( _ff_count + 1 )) > "$_ff_counter"
+
+IGNOREEOF=10
 
 export PATH="$HOME/.local/bin:$PATH"

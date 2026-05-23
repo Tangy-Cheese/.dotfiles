@@ -1,0 +1,87 @@
+configuration {
+    modi:                "drun,run";
+    show-icons:          true;
+    icon-theme:          "Papirus";
+    drun-display-format: "{name}";
+    display-drun:        " ";
+    display-run:         " ";
+    font:                "monospace 11";
+}
+
+* {
+    bg:           #020f01;
+    bg-alt:       #001f0b;
+    fg:           #16b10e;
+    fg-bright:    #19e20e;
+    gold:         #d4a017;
+    transparent:  #020f0100;
+
+    background-color: transparent;
+    text-color:       @fg;
+}
+
+window {
+    background-color: @bg;
+    border:           1px;
+    border-color:     @fg;
+    border-radius:    4px;
+    width:            480px;
+    padding:          12px;
+}
+
+mainbox {
+    spacing:  8px;
+    children: [ inputbar, listview ];
+}
+
+inputbar {
+    background-color: @bg-alt;
+    border:           0px 0px 1px 0px;
+    border-color:     @fg;
+    padding:          8px;
+    children:         [ prompt, entry ];
+}
+
+prompt {
+    text-color: @gold;
+    padding:    0px 8px 0px 0px;
+}
+
+entry {
+    text-color:        @fg-bright;
+    placeholder:       "search...";
+    placeholder-color: @fg;
+}
+
+listview {
+    lines:     8;
+    scrollbar: false;
+    spacing:   4px;
+}
+
+element {
+    padding:      6px 8px;
+    border-radius: 2px;
+    orientation:  horizontal;
+    spacing:      8px;
+}
+
+element normal.normal {
+    background-color: @transparent;
+    text-color:       @fg;
+}
+
+element selected.normal {
+    background-color: @bg-alt;
+    text-color:       @fg-bright;
+    border:           0px 0px 0px 2px;
+    border-color:     @gold;
+}
+
+element-icon {
+    size: 20px;
+}
+
+element-text {
+    vertical-align: 0.5;
+}
