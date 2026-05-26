@@ -8,5 +8,6 @@
 killall -q polybar
 
 polybar bar &
+polybar-hdmi &
 
 echo "Bars launched..."

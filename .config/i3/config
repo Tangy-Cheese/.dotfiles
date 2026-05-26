@@ -5,13 +5,14 @@ set $mod Mod4
 font pango:JetBrainsMono Nerd Font 8
 
 # Terminal
-bindsym $mod+Return exec ghostty
+bindsym $mod+Return exec --no-startup-id i3-msg split toggle && ghostty
 
 # Browser
 bindsym $mod+p exec google-chrome-stable
 
 # Thunar
 bindsym $mod+o exec Thunar
+
 # Kill window
 bindsym $mod+q kill
 
@@ -48,10 +49,6 @@ bindsym $mod+Shift+2 move container to workspace 2
 bindsym $mod+Shift+3 move container to workspace 3
 bindsym $mod+Shift+4 move container to workspace 4
 bindsym $mod+Shift+5 move container to workspace 5
-
-# Splits
-bindsym $mod+b split h
-bindsym $mod+v split v
 
 # Fullscreen
 bindsym $mod+f fullscreen toggle

@@ -2,7 +2,14 @@ name: QKD
 root: ~/codes/network_quantum_comms
 
 windows:
-  - main:
+  - frontend:
+      layout: tiled
+      panes:
+        - nvim
+        - claude
+        - 
+        - tomodoro -E
+  - backend:
       layout: tiled
       panes:
         - nvim
