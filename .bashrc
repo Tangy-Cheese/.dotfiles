@@ -85,6 +85,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+[ -f ~/.secrets ] && source ~/.secrets
+
 eval "$(starship init bash)"
 
 _ff_counter=~/.cache/fastfetch_counter
@@ -101,3 +103,4 @@ echo $(( _ff_count + 1 )) > "$_ff_counter"
 IGNOREEOF=10
 
 export PATH="$HOME/.local/bin:$PATH"
+export TMPDIR=$HOME/.cache/tmp
